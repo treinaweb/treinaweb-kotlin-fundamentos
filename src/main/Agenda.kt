@@ -28,10 +28,13 @@ fun main() {
     val idadeContato : Int
     val input = Scanner(System.`in`)
     println("Digite o nome do contato")
-    nomeContato = input.nextLine()
+    nomeContato = readLine().toString()
+    //nomeContato = input.nextLine()
     println("Digite o email do contato")
-    emailContato = input.nextLine()
+    emailContato = readLine().toString()
+    //emailContato = input.nextLine()
     println("Digite a idade do contato")
+    //idadeContato = readLine().toInt()
     idadeContato = input.nextInt()
 
 
