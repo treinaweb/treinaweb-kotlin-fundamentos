@@ -38,9 +38,13 @@ fun main() {
     idadeContato = input.nextInt()
 
 
-    println("O nome do contato é: $nomeContato")
+    println("O nome do contato é: $nomeContato que possui ${nomeContato.length} caracteres")
     println("O email do contato é: $emailContato")
     println("A idade do contato é: $idadeContato")
 
+    println(nomeContato.equals("Maria"))
+    println(nomeContato.reversed())
+    println(nomeContato.slice(1..3))
+    println(nomeContato.get(3))
 
 }
