@@ -38,9 +38,9 @@ fun main() {
     idadeContato = input.nextInt()
 
 
-    println(nomeContato)
-    println(emailContato)
-    println(idadeContato)
+    println("O nome do contato é: " + nomeContato)
+    println("O email do contato é: " + emailContato)
+    println("A idade do contato é: " + idadeContato)
 
 
 }
