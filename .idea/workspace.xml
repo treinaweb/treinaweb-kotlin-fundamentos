@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="64dc2169-35cc-40ad-9eae-80846ea32784" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/treinaweb-kotlin-fundamentos/main/AgendaKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/treinaweb-kotlin-fundamentos/main/AgendaKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Agenda.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Agenda.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
