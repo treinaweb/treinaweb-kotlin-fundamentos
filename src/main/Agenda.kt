@@ -27,7 +27,7 @@ fun main() {
     // var nomeContatoObrigatorio : String = nomeContato ?: "Valor Padrão" // Elvis Operator
     // println(nomeContatoObrigatorio.length)
     val emailContato : String
-    val idadeContato : Int? = null
+    var idadeContato : Int? = null
     // val input = Scanner(System.`in`)
     println("Digite o nome do contato")
     nomeContato = readLine().toString()
@@ -36,7 +36,7 @@ fun main() {
     emailContato = readLine().toString()
     //emailContato = input.nextLine()
     println("Digite a idade do contato")
-    //idadeContato = readLine()?.toInt()
+    idadeContato = readLine()?.toInt()
     //idadeContato = input.nextInt()
 
 
@@ -44,13 +44,24 @@ fun main() {
     println("O email do contato é: $emailContato")
     println("A idade do contato é: $idadeContato")
 
+//    if (idadeContato != null) {
+//        if (idadeContato <= 17) {
+//            println("O contato é menor de idade")
+//        } else if (idadeContato in 18 .. 60) {
+//            println("O contato é adulto")
+//        } else {
+//            println("O contato é idoso")
+//        }
+//    }
+
     if (idadeContato != null) {
-        if (idadeContato <= 17) {
-            println("O contato é menor de idade")
-        } else if (idadeContato in 18 .. 60) {
-            println("O contato é adulto")
-        } else {
-            println("O contato é idoso")
+        when (idadeContato) {
+            in 1..17 -> println("O contato é menor de idade")
+            in 18..60 -> {
+                println("o contato já pode ser preso")
+                println("O contato é adulto")
+            }
+            else -> println("O contato é idoso")
         }
     }
 
