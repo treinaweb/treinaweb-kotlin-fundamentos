@@ -23,12 +23,12 @@ fun main() {
 
     println("Olá, mundo!!")
     println("Curso de Kotlin da TreinaWeb");
-    val nomeContato : String
+    var nomeContato : String? = null // Safe Call Operator
     val emailContato : String
     val idadeContato : Int
     val input = Scanner(System.`in`)
-    println("Digite o nome do contato")
-    nomeContato = readLine().toString()
+    //println("Digite o nome do contato")
+    //nomeContato = readLine().toString()
     //nomeContato = input.nextLine()
     println("Digite o email do contato")
     emailContato = readLine().toString()
@@ -38,13 +38,13 @@ fun main() {
     idadeContato = input.nextInt()
 
 
-    println("O nome do contato é: $nomeContato que possui ${nomeContato.length} caracteres")
+    println("O nome do contato é: $nomeContato que possui ${nomeContato?.length} caracteres")
     println("O email do contato é: $emailContato")
     println("A idade do contato é: $idadeContato")
 
     println(nomeContato.equals("Maria"))
-    println(nomeContato.reversed())
-    println(nomeContato.slice(1..3))
-    println(nomeContato.get(3))
+    println(nomeContato?.reversed())
+    println(nomeContato?.slice(1..3))
+    println(nomeContato?.get(3))
 
 }
