@@ -5,8 +5,8 @@ import java.util.*
 fun main() {
     println("Olá, mundo!!")
     println("Curso de Kotlin da TreinaWeb");
-    var opcao: Int? = 0
-    while (opcao == 0) {
+    var opcao: Int?
+    do {
         var nomeContato: String? = null // Safe Call Operator
         val emailContato: String
         var idadeContato: Int? = null
@@ -39,7 +39,7 @@ fun main() {
 
         println("Deseja continuar? 0 - SIM / 1 - NÃO")
         opcao = readLine()?.toInt()
-    }
+    } while (opcao == 0)
 
     println("Obrigado por utilizar nosso gerenciamento de contatos")
 
