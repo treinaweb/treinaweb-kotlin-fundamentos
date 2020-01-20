@@ -32,6 +32,10 @@ fun main() {
             }
         }
 
+        for (i in 1..3) {
+            println(i)
+        }
+
         println(nomeContato.equals("Maria"))
         println(nomeContato?.reversed())
         println(nomeContato?.slice(1..3))
@@ -39,7 +43,7 @@ fun main() {
 
         println("Deseja continuar? 0 - SIM / 1 - NÃO")
         opcao = readLine()?.toInt()
-    } while (opcao == 0)
+    } while(opcao == 0)
 
     println("Obrigado por utilizar nosso gerenciamento de contatos")
 
