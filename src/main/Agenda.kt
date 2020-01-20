@@ -5,8 +5,8 @@ import java.util.*
 fun main() {
     println("Olá, mundo!!")
     println("Curso de Kotlin da TreinaWeb");
-    var opcao: Int?
-    do {
+    var opcao: Int? = 0
+    nome_do_loop@ do {
         var nomeContato: String? = null // Safe Call Operator
         val emailContato: String
         var idadeContato: Int? = null
@@ -23,7 +23,10 @@ fun main() {
 
         if (idadeContato != null) {
             when (idadeContato) {
-                in 1..17 -> println("O contato é menor de idade")
+                in 1..17 -> {
+                    continue@nome_do_loop
+                    println("O contato é menor de idade")
+                }
                 in 18..60 -> {
                     println("o contato já pode ser preso")
                     println("O contato é adulto")
@@ -32,9 +35,13 @@ fun main() {
             }
         }
 
-        for (i in 1..3) {
-            println(i)
-        }
+//        for (i in 1..5) {
+//            if (i % 2 == 0) {
+//                continue
+//                println(i)
+//            }
+//            println(i)
+//        }
 
         println(nomeContato.equals("Maria"))
         println(nomeContato?.reversed())
