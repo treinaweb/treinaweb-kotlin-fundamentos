@@ -2,6 +2,8 @@ package main
 
 import java.util.*
 
+data class Contato(var nomeContato: String, var emailContato: String, var idadeContato: Int?)
+
 fun main() {
     println("Olá, mundo!!")
     println("Curso de Kotlin da TreinaWeb");
@@ -17,14 +19,16 @@ fun main() {
         println("Digite a idade do contato")
         idadeContato = readLine()?.toInt()
 
-        println("O nome do contato é: $nomeContato que possui ${nomeContato?.length} caracteres")
-        println("O email do contato é: $emailContato")
-        println("A idade do contato é: $idadeContato")
+        var contato1 = Contato(nomeContato, emailContato, idadeContato)
 
-        if (idadeContato != null) {
-            when (idadeContato) {
+        println("O nome do contato é: ${contato1.nomeContato} que possui ${contato1.nomeContato?.length} caracteres")
+        println("O email do contato é: ${contato1.emailContato}")
+        println("A idade do contato é: ${contato1.idadeContato}")
+
+        if (contato1.idadeContato != null) {
+            when (contato1.idadeContato) {
                 in 1..17 -> {
-                    continue@nome_do_loop
+                    //continue@nome_do_loop
                     println("O contato é menor de idade")
                 }
                 in 18..60 -> {
@@ -43,10 +47,10 @@ fun main() {
 //            println(i)
 //        }
 
-        println(nomeContato.equals("Maria"))
-        println(nomeContato?.reversed())
-        println(nomeContato?.slice(1..3))
-        println(nomeContato?.get(3))
+        println(contato1.nomeContato.equals("Maria"))
+        println(contato1.nomeContato?.reversed())
+        println(contato1.nomeContato?.slice(1..3))
+        println(contato1.nomeContato?.get(3))
 
         println("Deseja continuar? 0 - SIM / 1 - NÃO")
         opcao = readLine()?.toInt()
