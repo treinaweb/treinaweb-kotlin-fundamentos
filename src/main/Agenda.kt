@@ -15,7 +15,13 @@ fun main() {
         println("2. LISTAR TODOS OS CONTATOS")
         println("3. REMOVER UM CONTATO")
         println("0. SAIR")
-        opcao = readLine()?.toInt()
+        try {
+            opcao = readLine()?.toInt()
+        } catch (e: NumberFormatException) {
+            println("Você deve digitar um número válido")
+        } finally {
+            println("Entrou no finally")
+        }
 
         when (opcao) {
             1 -> {
@@ -27,7 +33,13 @@ fun main() {
                 println("Digite o email do contato")
                 emailContato = readLine().toString()
                 println("Digite a idade do contato")
-                idadeContato = readLine()?.toInt()
+                try {
+                    idadeContato = readLine()?.toInt()
+                } catch (e: NumberFormatException) {
+                    println("Você deve digitar uma idade válida")
+                } catch (e: NullPointerException) {
+                    println("Você deve digitar uma idade")
+                }
 
                 var contato1 = Contato(nomeContato, emailContato, idadeContato)
                 listaContato.add(contato1) // ((Maria, maria@mail.com, 50), (João, joao@mail.com, 30))
